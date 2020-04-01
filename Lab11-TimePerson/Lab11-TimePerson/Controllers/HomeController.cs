@@ -26,7 +26,9 @@ namespace Lab11_TimePerson.Controllers
 
             List<TimePerson> persons = TimePerson.GetPersons(begYear, endYear);
 
-            return null;
+            // return RedirectToAction("Results", student);
+            return RedirectToAction("Results", persons);
+
         }
 
         public IActionResult Results(List<TimePerson> persons)
